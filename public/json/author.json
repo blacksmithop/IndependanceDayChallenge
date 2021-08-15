@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Jane Austen",
+        "country": "United Kingdom",
+        "imageLink": "Jane_Austen_coloured_version.jpg",
+        "language": "English",
+        "title": "Pride and Prejudice"
+    },
+    {
+        "name": "Giovanni Boccaccio",
+        "country": "Italy",
+        "imageLink": "istockphoto-1147567988-612x612.jpg",
+        "language": "Italian",
+        "title": "The Decameron"
+    },
+    {
+        "name": "Chinua Achebe",
+        "country": "Nigeria",
+        "imageLink": "Chinua-Achebe.jpg",
+        "language": "English",
+        "title": "Things Fall Apart"
+    },
+    {
+        "name": "Hans Christian Andersen",
+        "country": "Denmark",
+        "imageLink": "Hans_Christain_Anderson.jpg",
+        "language": "Danish",
+        "title": "Fairy tales"
+    },
+    {
+        "name": "Dante Alighieri",
+        "country": "Italy",
+        "imageLink": "Dante.jpg",
+        "language": "Italian",
+        "title": "The Divine Comedy"
+    }
+]

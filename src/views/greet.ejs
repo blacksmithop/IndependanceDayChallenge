@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head'); %>
+</head>
+<style>
+    body {
+        background: #009688;
+    }
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        color: inherit;
+    }
+</style>
+
+<body>
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+    <p class="mt-5 display-4 text-center">
+        <%= (message) ? message : '' %>
+    </p>
+    <% if (id) { %>
+        <p class="display-5 text-center"> Find me at <code>/greet/<%= id %></code></p>
+        <% } %>
+
+            <!--script defer src="js/greet.js"></script-->
+</body>
+
+</html>

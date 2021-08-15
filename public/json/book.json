@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Pride And Prejudice",
+        "author": "Jane Austen",
+        "genre": "Romance, Family",
+        "imageLink": "pride_prejudice.jpg",
+        "about": "Pride and Prejudice is a romantic novel of manners written by Jane Austen in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and comes to appreciate the difference between superficial goodness and actual goodness. Its humour lies in its honest depiction of manners, education, marriage, and money during the Regency era in Great Britain."
+    },
+    {
+        "name": "Little Women",
+        "author": "Louisa May Alcott",
+        "genre": "Novel",
+        "imageLink": "little_women.jpg",
+        "about": "A richly written novel with a cast of memorable characters, Little Women invites us into the warm, comfortable home of a 19th-century American family. Everyone can find a character trait that resonates with them, whether Jo’s temper, Meg’s vanity, Amy’s mischievousness, or Beth’s shyness. The novel is a coming-of-age story that follows four sisters (the March girls) from girlhood to womanhood in Civil War America. Together they learn about the harsh realities of poverty, illness, and death, and how to dream, love, and laugh through it all. This is a heartwarming, timeless classic about the importance of family and the simple, home-spun comfort of never being alone."
+    },
+    {
+        "name": "The Kite Runner",
+        "author": "Khaled Hosseini",
+        "genre": "life and drama",
+        "imageLink": "kite_runner.jpg",
+        "about": "Told against the backdrop of the changing political landscape of Afghanistan from the 1970s to the period following 9/11, The Kite Runner is the story of the unlikely and complicated friendship between Amir, the son of a wealthy merchant, and Hassan, the son of his father’s servant until cultural and class differences and the turmoil of war tear them asunder. Hosseini brings his homeland to life for us in a way that post 9/11 media coverage never could, showing us a world of ordinary people who live, die, eat, pray, dream, and love. It’s a story about the long shadows that family secrets cast across decades, the enduring love of friendship, and the transformative power of forgiveness."
+    },
+    {
+        "name": "The Alchemist",
+        "author": "Paulo Coelho",
+        "genre": "Quest, adventure, fantasy",
+        "imageLink": "the_alchemist.jpg",
+        "about": "The Alchemist (Portuguese: O Alquimista) is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there."
+    },
+    {
+        "name": "The Outsiders",
+        "author": "S.E. Hinton",
+        "genre": "Novel",
+        "imageLink": "the_outsiders.jpg",
+        "about": "Hinton penned this novel when she was only 16 because she was tired of reading fluffy romances. She wanted a story about the harsh realities of being a teenager in mid-20th century America, and since none existed, she wrote one herself. Told from the perspective of orphan Ponyboy Kurtis, this multiple award-winning young adult novel tells the story of a group of rough, teenage boys on the streets of an Oklahoma town, struggling to survive and stick together amidst violence, peer pressure, and broken homes. The novel reminds us that growing up is never easy and that pain, loss, friendship, and love are universal experiences that both create and dissolve socio-economic boundaries."
+    }
+]

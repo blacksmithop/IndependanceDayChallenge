@@ -1,0 +1,11 @@
+form {
+    width: 200px;
+}
+
+div + div {
+    margin-top: 10px;
+}
+
+label + input {
+    margin-top: 10px;
+}
