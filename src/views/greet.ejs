@@ -25,15 +25,24 @@
     a:hover {
         color: inherit;
     }
+    img {
+        width: 300px;
+        height:300px;
+    }
+
+
 </style>
 
 <body>
     <header>
         <%- include('./partials/header'); %>
     </header>
+    <div class="mt-5 container text-center">
+        <p class="text-dark display-2">Welcome</p>
+        <img src="https://i.ibb.co/n6yrvPD/cover.webp" class="front rounded-circle mx-auto d-block" alt="...">
+    </div>
     <p class="mt-5 display-4 text-center">
         <%= (message) ? message : '' %>
-    </p>
     <% if (id) { %>
         <p class="display-5 text-center"> Find me at <code>/greet/<%= id %></code></p>
         <% } %>

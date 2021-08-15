@@ -76,9 +76,7 @@ auth.post('/', (req, res, next) => {
 });
 
 
-auth.post('/sendemail', asyncMiddleware(async (req, res, next) => {
-    res.redirect('index');
-}));
+
 
 auth.get('/greet/:url?', (req, res, next) => {
     if (req.params.url) {
@@ -86,40 +84,48 @@ auth.get('/greet/:url?', (req, res, next) => {
         console.log(url);
         UserData.findById(url, function (err, user) {
             if (err) {
-                req.session.message = "Error"
+                message = "Please specify an id in the url"
             }
             else if (user) {
-                message = `Happy Independance day ${user.name}`;
+                message = user.name;
+                message = `${message} wishes you a Happy Independance day!!`;
                 identity = user._id;
             }
         });
     }
     else { // grab user
         response = req.session.message;
+        identity = null;
         console.log("No id given");
-        if (typeof response == 'undefined'){
-            message = "Please specify an id in the url"
+        if (typeof response == 'undefined') {
+            message = "Please specify an id in the url";
         }
         else if (response == "Error") {
-            message = "Could not find user by id"
+            message = "Could not find user by id";
+        }
+        else if (response.includes("com")){
+            message = `Successfully sent email via ${response}`;
         }
         else {
             console.log(response);
-            message = `Happy Independance day ${response.name}!!`
+            message = response.name;
+            message = `${message} wishes you a Happy Independance day!!`;
             identity = response._id;
         }
     }
-    req.session.destroy();
-    res.render('greet', { message: message, id: identity? identity: null});
+    //req.session.destroy();
+    res.render('greet', { message: message, id: identity ? identity : null });
 
 });
 
-
+auth.get('/sendemail/:emailid/:name', asyncMiddleware(async (req, res, next) => {
+    res.redirect('index');
+}));
 
 async function sendEmail(req, res, next) {
 
-    email = req.body.emailid;
-    fname = req.body.name;
+    email = req.params.emailid;
+    fname = req.params.name;
     console.log("Sending email");
     // Generate test SMTP service account from ethereal.email
     // Only needed if you don't have a real mail account for testing
@@ -145,12 +151,8 @@ async function sendEmail(req, res, next) {
         html: `<b>Happy Independence Day ${fname}!!</b>`, // html body
     });
 
-    console.log("Message sent: %s", info.messageId);
-    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
     // Preview only available when sending through an Ethereal account
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+    console.log("Find email at: %s", nodemailer.getTestMessageUrl(info));
 }
 
 module.exports = auth;
