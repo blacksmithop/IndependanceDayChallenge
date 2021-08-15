@@ -119,7 +119,7 @@ auth.get('/greet/:url?', (req, res, next) => {
 });
 
 auth.get('/sendemail/:emailid/:name', asyncMiddleware(async (req, res, next) => {
-    res.redirect('index');
+
 }));
 
 async function sendEmail(req, res, next) {
@@ -153,6 +153,7 @@ async function sendEmail(req, res, next) {
 
     // Preview only available when sending through an Ethereal account
     console.log("Find email at: %s", nodemailer.getTestMessageUrl(info));
+    req.session.test = nodemailer.getTestMessageUrl(info);
 }
 
 module.exports = auth;
