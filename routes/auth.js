@@ -99,13 +99,13 @@ auth.get('/greet/:url?', (req, res, next) => {
         console.log("No id given");
         if (typeof response == 'undefined') {
             message = "Please specify an id in the url";
-        }/*
+        }
         else if (response == "Error") {
             message = "Could not find user by id";
-        }*/
+        }/*
         else if (response.includes("com")){
             message = `Successfully sent email via ${response}`;
-        }
+        }*/
         else {
             console.log(response);
             message = response.name;
